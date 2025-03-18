@@ -1,4 +1,6 @@
 @import 'tailwindcss';
+@import '../../vendor/livewire/flux/dist/flux.css';
+@custom-variant dark (&:where(.dark, .dark *));
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
@@ -6,7 +8,50 @@
 @source "../**/*.js";
 @source "../**/*.vue";
 
+/* Fonts */
+/* Incolsolata */
+@font-face {
+    font-family: 'Inconsolata-Black';
+    src: url('/fonts/Inconsolata/Inconsolata-Black.ttf') format('truetype');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Inconsolata-Bold';
+    src: url('/fonts/Inconsolata/Inconsolata-Bold.ttf') format('truetype');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Inconsolata-Regular';
+    src: url('/fonts/Inconsolata/Inconsolata-Regular.ttf') format('truetype');
+    font-display: swap;
+}
+/* Maven Pro */
+@font-face {
+    font-family: 'MavenPro-Black';
+    src: url('/fonts/Maven_Pro/MavenPro-Black.ttf') format('truetype');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MavenPro-Bold';
+    src: url('/fonts/Maven_Pro/MavenPro-Bold.ttf') format('truetype');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MavenPro-Regular';
+    src: url('/fonts/Maven_Pro/MavenPro-Regular.ttf') format('truetype');
+    font-display: swap;
+}
+
 @theme {
+    /* Fonts Inconsolata */
+    --font-Inconsolata-Black: "Inconsolata-Black", sans-serif;
+    --font-Inconsolata-Bold: "Inconsolata-Bold", sans-serif;
+    --font-Inconsolata-Regular: "Inconsolata-Regular", sans-serif;
+    /* Fonts Maven Pro */
+    --font-MavenPro-Black: "MavenPro-Black", sans-serif;
+    --font-MavenPro-Bold: "MavenPro-Bold", sans-serif;
+    --font-MavenPro-Regular: "MavenPro-Regular", sans-serif;
+
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
