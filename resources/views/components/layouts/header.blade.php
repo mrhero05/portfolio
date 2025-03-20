@@ -1,9 +1,11 @@
 <header>
     <section class="flex justify-center flex-wrap">
-        <div class="w-full m-auto flex justify-center my-5 gap">
-            <a href="#" class="font-Inconsolata-Black">Works</a>
-            <a href="#">About</a>
-            <a href="#">Resume</a>
+        <div class="w-full my-5">
+            <div class="border w-max m-auto flex justify-center p-[5px_10px] rounded-full border-dark dark:border-gray2 gap-x-[10px] md:gap-x-[10px] text-dark dark:text-gray2 font-MavenPro-Medium">
+                <a href="#" class="hover:bg-gray2 hover:text-white transition-all rounded-full p-[4px_10px]">Works</a>
+                <a href="#" class="hover:bg-gray2 hover:text-white transition-all rounded-full p-[4px_10px]">About</a>
+                <a href="#" class="hover:bg-gray2 hover:text-white transition-all rounded-full p-[4px_10px]">Resume</a>
+            </div>
         </div>
         <div class="block w-max md:absolute right-0">
             <flux:radio.group x-data variant="segmented" x-model="$flux.appearance" class="hover:cursor-pointer">

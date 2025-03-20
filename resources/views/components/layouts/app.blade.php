@@ -9,8 +9,10 @@
         @fluxAppearance
     </head>
     <body>
-        <x-layouts.header />
-        {{ $slot }}
-        @fluxScripts
+        <div class=""">
+            <x-layouts.header />
+            {{ $slot }}
+            @fluxScripts
+        </div>
     </body>
 </html>
