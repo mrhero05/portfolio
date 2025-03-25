@@ -46,7 +46,12 @@ class HeroHeaderResource extends Resource
                         TextInput::make('custom_css')
                             ->label('Custom CSS'),
                         FileUpload::make('language_icon')
-                            ->label('Language Icon'),
+                            ->label('Language Icon')
+                            ->disk('public')
+                            ->directory('uploaded_image')
+                            ->imagePreviewHeight(100)
+                            ->image()
+                            ->maxSize(2048),
                     ])->columns(3)->columnSpanFull(),
             ]);
     }

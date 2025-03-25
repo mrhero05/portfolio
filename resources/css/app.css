@@ -53,9 +53,14 @@
     }
 
     /* Custom Colors */
-    --color-gray: #878EA1;
-    --color-gray2: #C0C4CE;
+    --color-pf-gray1: #878EA1;
+    --color-pf-gray2: #C0C4CE;
+    --color-pf-gray3: #878EA1;
+    --color-pf-green: #82BC4F;
+    --color-pf-peach: #FEE7DC;
+    --color-pf-orange: #FF5500;
     --color-dark: #292C34;
+
 
     /* Fonts Inconsolata */
     --font-Inconsolata-Black: "Inconsolata-Black", sans-serif;
@@ -69,4 +74,11 @@
 
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/* Custom CSS */
+@layer components{
+    .hero-desc strong{
+        @apply text-pf-orange;
+    }
 }
