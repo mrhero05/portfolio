@@ -1,10 +1,10 @@
 <header>
     <section class="flex justify-center flex-wrap">
         <div class="w-full my-5">
-            <div class="border w-max m-auto flex justify-center p-[5px_10px] rounded-full border-dark dark:border-pf-gray2 gap-x-[10px] md:gap-x-[10px] text-dark dark:text-pf-gray2 font-MavenPro-Medium">
-                <a href="#" class="hover:bg-pf-gray2 hover:text-white transition-all rounded-full p-[4px_10px]">Works</a>
-                <a href="#" class="hover:bg-pf-gray2 hover:text-white transition-all rounded-full p-[4px_10px]">About</a>
-                <a href="#" class="hover:bg-pf-gray2 hover:text-white transition-all rounded-full p-[4px_10px]">Resume</a>
+            <div class="border w-max m-auto flex justify-center p-[5px_10px] rounded-full border-dark dark:border-pf-gray2 gap-x-[10px] md:gap-x-[10px] text-dark dark:text-pf-gray2 font-MavenPro-Medium z-10 relative">
+                <a href="#" class="hover:bg-pf-orange hover:text-white transition-all rounded-full p-[4px_10px]">Works</a>
+                <a href="#" class="hover:bg-pf-orange hover:text-white transition-all rounded-full p-[4px_10px]">About</a>
+                <a href="#" class="hover:bg-pf-orange hover:text-white transition-all rounded-full p-[4px_10px]">Resume</a>
             </div>
         </div>
         <div class="block w-max md:absolute md:m-5 right-0 z-1">

@@ -4,23 +4,25 @@ namespace App\Filament\Resources;
 
 use Filament\Forms;
 use Filament\Tables;
+use App\Models\Projects;
 use Filament\Forms\Form;
-use App\Models\HeroHeader;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
+use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Repeater;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
 use Illuminate\Database\Eloquent\Builder;
+use App\Filament\Resources\ProjectsResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use App\Filament\Resources\HeroHeaderResource\Pages;
-use App\Filament\Resources\HeroHeaderResource\RelationManagers;
+use App\Filament\Resources\ProjectsResource\RelationManagers;
+use Filament\Tables\Columns\ImageColumn;
 
-class HeroHeaderResource extends Resource
+class ProjectsResource extends Resource
 {
-    protected static ?string $model = HeroHeader::class;
+    protected static ?string $model = Projects::class;
     protected static ?string $navigationGroup = 'Landing Pages';
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -31,28 +33,28 @@ class HeroHeaderResource extends Resource
                 //
                 TextInput::make('title')
                     ->label('Title'),
-                TextInput::make('float_text')
-                    ->label('Floating Text'),
+                TextInput::make('order_weight')
+                    ->label('Order Weight'),
                 RichEditor::make('description')
                     ->label('Description')->columnSpanFull(),
-                Repeater::make('languages')
-                    ->label('Languages')
+                Section::make('Links')
+                    ->description('Other Information for Feature Projects.')
                     ->schema([
-                        TextInput::make('language_text')
-                            ->label('Language Text'),
-                        TextInput::make('language_link')
-                            ->prefix('https://')
-                            ->label('Language Link'),
-                        TextInput::make('custom_css')
-                            ->label('Custom CSS'),
-                        FileUpload::make('language_icon')
-                            ->label('Language Icon')
+                        TextInput::make('project_link')
+                            ->label('Project Link'),
+                        TextInput::make('github_link')
+                            ->label('Github Link'),
+                        FileUpload::make('project_images')
+                            ->label('Project Images')
                             ->disk('public')
                             ->directory('uploaded_image')
                             ->imagePreviewHeight(100)
+                            ->multiple()
                             ->image()
                             ->maxSize(2048),
-                    ])->columns(3)->columnSpanFull(),
+                    ])
+                    ->columns(3)
+
             ]);
     }
 
@@ -61,13 +63,19 @@ class HeroHeaderResource extends Resource
         return $table
             ->columns([
                 //
-                TextColumn::make('title'),
-                TextColumn::make('float_text')
-                    ->label('Floating Text'),
+                TextColumn::make('title')
+                    ->label('Title'),
                 TextColumn::make('description')
-                    ->html()->wrap()->lineClamp(2),
-
-
+                    ->label('Description')
+                    ->html()->wrap()->lineClamp(3),
+                ImageColumn::make('project_images')
+                ->circular()
+                ->stacked()
+                ->limit(3)
+                ->limitedRemainingText(),
+                TextColumn::make('order_weight')
+                    ->label('Order')
+                    ->sortable(),
             ])
             ->filters([
                 //
@@ -92,9 +100,9 @@ class HeroHeaderResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListHeroHeaders::route('/'),
-            'create' => Pages\CreateHeroHeader::route('/create'),
-            'edit' => Pages\EditHeroHeader::route('/{record}/edit'),
+            'index' => Pages\ListProjects::route('/'),
+            'create' => Pages\CreateProjects::route('/create'),
+            'edit' => Pages\EditProjects::route('/{record}/edit'),
         ];
     }
 }

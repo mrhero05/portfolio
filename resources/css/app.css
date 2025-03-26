@@ -37,6 +37,11 @@
     font-display: swap;
 }
 @font-face {
+    font-family: 'MavenPro-SemiBold';
+    src: url('/public/fonts/Maven_Pro/MavenPro-SemiBold.ttf') format('truetype');
+    font-display: swap;
+}
+@font-face {
     font-family: 'MavenPro-Medium';
     src: url('/public/fonts/Maven_Pro/MavenPro-Medium.ttf') format('truetype');
     font-display: swap;
@@ -48,18 +53,18 @@
 }
 
 @theme {
-    --backgroundImage: {
-        'body-bg': "url('/images/background.png')",
-    }
 
     /* Custom Colors */
     --color-pf-gray1: #878EA1;
     --color-pf-gray2: #C0C4CE;
     --color-pf-gray3: #878EA1;
+    --color-pf-gray4: #767E90;
     --color-pf-green: #82BC4F;
     --color-pf-peach: #FEE7DC;
     --color-pf-orange: #FF5500;
+    --color-pf-light-orage: #FEE7DC;
     --color-dark: #292C34;
+    --color-white: #F5F5F5;
 
 
     /* Fonts Inconsolata */
@@ -69,6 +74,7 @@
     /* Fonts Maven Pro */
     --font-MavenPro-Black: "MavenPro-Black", sans-serif;
     --font-MavenPro-Bold: "MavenPro-Bold", sans-serif;
+    --font-MavenPro-SemiBold: "MavenPro-SemiBold", sans-serif;
     --font-MavenPro-Medium: "MavenPro-Medium", sans-serif;
     --font-MavenPro-Regular: "MavenPro-Regular", sans-serif;
 
@@ -80,5 +86,19 @@
 @layer components{
     .hero-desc strong{
         @apply text-pf-orange;
+    }
+
+    .bg-bodywhite {
+        background-image: url('https://portfolio.test/images/background.png');
+        /* height: 100vh; */
+    }
+
+    .dark body .bg-bodydark {
+        background-image: url('https://portfolio.test/images/background-dark.png');
+        /* height: 100vh; */
+    }
+
+    .project-desc p{
+        margin-bottom: 1rem;
     }
 }
