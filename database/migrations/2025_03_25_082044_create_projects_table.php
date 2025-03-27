@@ -17,9 +17,9 @@ return new class extends Migration
             $table->string('title')->required();
             $table->integer('order_weight')->required();
             $table->longText('description')->nullable();
-            $table->string('project_link');
-            $table->string('github_link');
-            $table->json('project_images');
+            $table->string('project_link')->nullable();
+            $table->string('github_link')->nullable();
+            $table->json('project_images')->nullable();
         });
     }
 
