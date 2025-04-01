@@ -5,4 +5,6 @@
     <livewire:landing.projects />
     {{-- About Frameworks --}}
     <livewire:landing.frameworks>
+    {{-- Experiences --}}
+    <livewire:landing.experience>
 </div>

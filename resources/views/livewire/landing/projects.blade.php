@@ -4,9 +4,9 @@
         <h2 class="font-Inconsolata-Black text-[2rem] w-full text-dark dark:text-white">Featured Projects</h2>
     </div>
     @if ($projects)
-        <div class="my-[50px] flex flex-wrap gap-[20px]">
+        <div class="my-[50px] flex flex-wrap gap-[20px] text">
         @foreach ($projects as $item)
-            <div class="flex flex-col p-5 bg-pf-light-orage dark:bg-dark rounded-[30px] w-full md:w-[calc(33.3%-13px)]">
+            <div class="flex shadow-lg flex-col p-5 bg-pf-light-orage dark:bg-dark rounded-[30px] w-full md:w-[calc(33.3%-13px)]">
                 <p class="font-Inconsolata-Bold text-[1.5rem] text-dark dark:text-white">{{ $item->title }}</p>
                 <div class="font-MavenPro-Regular text-dark dark:text-pf-gray2 project-desc">
                     {!! $item->description !!}
