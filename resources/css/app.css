@@ -101,4 +101,12 @@
     .project-desc p{
         margin-bottom: 0.5rem;
     }
+
+    /* lightbox close btn */
+    .lb-data .lb-close {
+        position: absolute;
+        top: -30px;
+        right: 30px;
+    }
+
 }

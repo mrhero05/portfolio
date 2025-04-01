@@ -8,6 +8,6 @@ class ProjectRepository
 {
     public function getAllProjects()
     {
-        return Projects::get();
+        return Projects::orderBy('order_weight','desc')->get();
     }
 }
