@@ -7,7 +7,7 @@
                 <a href="#" class="hover:bg-pf-orange hover:text-white transition-all rounded-full p-[4px_10px]">Resume</a>
             </div>
         </div>
-        <div class="block w-max md:absolute md:m-5 right-0 z-1">
+        <div class="block w-max md:fixed md:m-5 right-0 z-1">
             <flux:radio.group x-data variant="segmented" x-model="$flux.appearance" class="hover:cursor-pointer">
                 <flux:radio value="light" icon="sun" />
                 <flux:radio value="dark" icon="moon" />

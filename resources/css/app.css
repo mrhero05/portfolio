@@ -21,6 +21,11 @@
     font-display: swap;
 }
 @font-face {
+    font-family: 'Inconsolata-SemiBold';
+    src: url('/public/fonts/Inconsolata/Inconsolata-SemiBold.ttf') format('truetype');
+    font-display: swap;
+}
+@font-face {
     font-family: 'Inconsolata-Regular';
     src: url('/public/fonts/Inconsolata/Inconsolata-Regular.ttf') format('truetype');
     font-display: swap;
@@ -62,6 +67,7 @@
     --color-pf-green: #82BC4F;
     --color-pf-peach: #FEE7DC;
     --color-pf-orange: #FF5500;
+    --color-pf-orange2: #D2622E;
     --color-pf-light-orage: #FEE7DC;
     --color-dark: #292C34;
     --color-white: #F5F5F5;
@@ -70,6 +76,7 @@
     /* Fonts Inconsolata */
     --font-Inconsolata-Black: "Inconsolata-Black", sans-serif;
     --font-Inconsolata-Bold: "Inconsolata-Bold", sans-serif;
+    --font-Inconsolata-SemiBold: "Inconsolata-SemiBold", sans-serif;
     --font-Inconsolata-Regular: "Inconsolata-Regular", sans-serif;
     /* Fonts Maven Pro */
     --font-MavenPro-Black: "MavenPro-Black", sans-serif;
@@ -107,6 +114,13 @@
         position: absolute;
         top: -30px;
         right: 30px;
+    }
+
+    .experience-wrapper .description ul{
+        margin-bottom: 0.5rem;
+    }
+    .experience-wrapper .description ul li{
+        font-family: 'MavenPro-Regular';
     }
 
 }
