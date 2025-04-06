@@ -64,12 +64,17 @@
     --color-pf-gray2: #C0C4CE;
     --color-pf-gray3: #878EA1;
     --color-pf-gray4: #767E90;
+    --color-pf-gray5: #333333;
+    --color-pf-gray6: #E8E7EA;
     --color-pf-green: #82BC4F;
     --color-pf-peach: #FEE7DC;
     --color-pf-orange: #FF5500;
     --color-pf-orange2: #D2622E;
     --color-pf-light-orage: #FEE7DC;
+    --color-pf-dark3: #2A3847;
     --color-dark: #292C34;
+    --color-dark2: #1E2D3D;
+    --color-pf-black: #000000;
     --color-white: #F5F5F5;
 
 
@@ -87,6 +92,13 @@
 
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/* Global CSS */
+@layer base{
+    html{
+        @apply scroll-smooth;
+    }
 }
 
 /* Custom CSS */

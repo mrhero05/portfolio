@@ -7,4 +7,6 @@
     <livewire:landing.frameworks>
     {{-- Experiences --}}
     <livewire:landing.experience>
+    {{-- Contact Me --}}
+    <livewire:landing.contact>
 </div>

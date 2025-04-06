@@ -30,6 +30,10 @@ class AdminLoginPanelProvider extends PanelProvider
             ->brandLogo(asset('images/logos/white-logo.png'))
             ->brandLogoHeight('3rem')
             ->favicon(asset('images/logos/logo.png'))
+            ->navigationGroups([
+                'Landing Pages',
+                'Footer Section',
+            ])
             ->colors([
                 'primary' => Color::Amber,
             ])
