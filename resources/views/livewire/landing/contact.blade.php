@@ -10,7 +10,7 @@
         <p class="font-MavenPro-Bold text-[3.5rem] text-pf-orange">Get in Touch</p>
         <p class="font-MavenPro-Regular text-pf-gray5">Contact me through any of these platforms</p>
         <div class="flex mt-[20px] gap-x-[10px]">
-            @if ($contacts[0])
+            @if (isset($contacts[0]))
                 @foreach ($contacts[0]['social_data'] as $contact)
                     <a href="{{ $contact['link'] }}" target="_blank">
                         <div class="group transition-all dark:bg-transparent dark:border-pf-gray2 bg-white border-[1px] hover:bg-pf-orange border-pf-gray6 w-[45px] h-[45px] rounded-full relative">

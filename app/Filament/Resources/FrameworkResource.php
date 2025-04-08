@@ -22,6 +22,7 @@ class FrameworkResource extends Resource
 {
     protected static ?string $model = Framework::class;
     protected static ?string $navigationGroup = 'Landing Pages';
+    protected static ?int $navigationSort = 3;
     protected static ?string $navigationIcon = 'heroicon-o-code-bracket';
 
     public static function form(Form $form): Form
