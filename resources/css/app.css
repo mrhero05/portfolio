@@ -103,6 +103,13 @@
 
 /* Custom CSS */
 @layer components{
+    .sub-heading p{
+        @apply text-pf-orange
+    }
+    .sub-heading p strong{
+        @apply text-pf-black dark:text-white
+    }
+
     .hero-desc strong{
         @apply text-pf-orange;
     }

@@ -8,6 +8,7 @@ use App\Services\Landing\ContactServices;
 class Contact extends Component
 {
     private $ContactServices;
+
     public function mount(ContactServices $contactServices)
     {
         $this->ContactServices = $contactServices;

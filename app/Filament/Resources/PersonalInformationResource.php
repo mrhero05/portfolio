@@ -43,10 +43,13 @@ class PersonalInformationResource extends Resource
                     ->maxSize(2048),
                 Repeater::make('info_data')
                     ->schema([
+                        TextInput::make('hire_link')
+                            ->label('Hire Link')
+                            ->columnSpanFull(),
                         TextInput::make('heading')
                             ->label('Heading')
                             ->columnSpan(1),
-                            RichEditor::make('sub_heading')
+                        RichEditor::make('sub_heading')
                             ->label('Sub Heading')
                             ->columnSpan(1),
                         RichEditor::make('description')
