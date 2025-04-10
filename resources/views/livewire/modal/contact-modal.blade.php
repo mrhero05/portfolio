@@ -1,6 +1,6 @@
 <div>
     <flux:modal name="contact-modal" class="w-[90%] md:w-120">
-        <form wire:submit.prevent='send'>
+        <form wire:submit='send'>
             <div class="space-y-6">
                 <div>
                     <div class="flex items-center gap-x-[10px]">
@@ -30,12 +30,12 @@
                 <div class="flex">
                     <flux:spacer />
 
-                    <button class="mt-2 cursor-pointer bg-pf-dark3 text-white p-[8px_20px] rounded-full hover:bg-pf-orange transition-all" type="submit">
+                    <flux:button class="mt-2 cursor-pointer bg-pf-dark3 text-white p-[8px_20px] rounded-full hover:bg-pf-orange transition-all" type="submit">
                         <div wire:loading>
                             <x-fields.loading></x-fields.loading>
                         </div>
                         Send <i class="fa-solid fa-paper-plane"></i>
-                    </button>
+                    </flux:button>
                 </div>
             </div>
         </form>
