@@ -62,6 +62,7 @@ class ProjectsResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
+            ->reorderable('order_weight')
             ->columns([
                 //
                 TextColumn::make('title')
@@ -78,6 +79,7 @@ class ProjectsResource extends Resource
                     ->label('Order')
                     ->sortable(),
             ])
+            ->defaultSort('order_weight', 'desc')
             ->filters([
                 //
             ])

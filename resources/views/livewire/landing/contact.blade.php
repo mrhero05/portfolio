@@ -8,7 +8,7 @@
     </div>
     <div class="flex my-[50px] text-center flex-col items-center">
         <p class="font-MavenPro-Bold text-[3.5rem] text-pf-orange">Get in Touch</p>
-        <p class="font-MavenPro-Regular text-pf-gray5">Contact me through any of these platforms</p>
+        <p class="font-MavenPro-Regular text-pf-gray5 dark:text-pf-gray2">Contact me through any of these platforms</p>
         <div class="flex mt-[20px] gap-x-[10px]">
             @if (isset($contacts[0]))
                 @foreach ($contacts[0]['social_data'] as $contact)
@@ -22,5 +22,8 @@
                 @endforeach
             @endif
         </div>
+    </div>
+    <div class="footer text-center text-dark dark:text-pf-gray2">
+        <p>© 2025 Ogie Sanchez</p>
     </div>
 </div>

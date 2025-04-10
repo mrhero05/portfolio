@@ -5,11 +5,11 @@
                 <div>
                     <div class="flex items-center gap-x-[10px]">
                         <flux:avatar class="w-[30px] flex items-center" src="{{ asset('images/logos/logo.png') }}" />
-                        <flux:text class="text-black font-MavenPro-SemiBold text-[1.2rem]">Get in Touch</flux:text>
+                        <flux:text class="text-black dark:text-white font-MavenPro-SemiBold text-[1.2rem]">Get in Touch</flux:text>
                     </div>
                     <flux:heading class="font-Inconsolata-Black text-[1.8rem]" size="lg">Let’s Connect</flux:heading>
-                    <flux:text class="mt-2 text-dark">Have a project in mind, a job opportunity, or just want to say hi? I'd love to hear from you.</flux:text>
-                    <flux:text class="mt-2 text-dark">Fill out the form below and I’ll get back to you as soon as I can.</flux:text>
+                    <flux:text class="mt-2 text-dark dark:text-white">Have a project in mind, a job opportunity, or just want to say hi? I'd love to hear from you.</flux:text>
+                    <flux:text class="mt-2 text-dark dark:text-white">Fill out the form below and I’ll get back to you as soon as I can.</flux:text>
                 </div>
 
                 <flux:field class="mb-2">
