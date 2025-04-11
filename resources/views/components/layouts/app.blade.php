@@ -20,7 +20,7 @@
         {{-- Main JS --}}
         <script src="{{ asset('js/main.js') }}"></script>
     </head>
-    <body>
+    <body class="overflow-x-hidden md:overflow-x-auto">
         <div class="relative bg-cover bg-no-repeat bg-bodywhite bg-bodydark">
             <div class="absolute left-0">{!! file_get_contents(public_path('images/logos/left-design.svg')) !!}</div>
             <div class="absolute right-0">{!! file_get_contents(public_path('images/logos/right-design.svg')) !!}</div>
