@@ -1,12 +1,22 @@
 <div class="max-w-[400px] md:max-w-[1140px] m-auto py-[20px] md:py-[50px]" id="projects">
     <div class="text-center">
-        <p class="font-MavenPro-SemiBold text-[1.2rem] bg-linear-to-r from-pf-orange to-pf-gray4 bg-clip-text text-transparent w-max m-auto">WORKS</p>
-        <h2 class="font-Inconsolata-Black text-[2rem] w-full text-dark dark:text-white">Featured Projects</h2>
+        <p class="font-MavenPro-SemiBold text-[1.2rem] bg-linear-to-r from-pf-orange to-pf-gray4 bg-clip-text text-transparent w-max m-auto"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+        >WORKS</p>
+        <h2 class="font-Inconsolata-Black text-[2rem] w-full text-dark dark:text-white"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+        >Featured Projects</h2>
     </div>
     @if ($projects)
         <div class="my-[50px] flex flex-wrap gap-[20px] text">
-        @foreach ($projects as $item)
-            <div class="flex shadow-lg flex-col p-5 bg-pf-light-orage dark:bg-dark rounded-[30px] w-full md:w-[calc(33.3%-13px)]">
+        @foreach ($projects as $index => $item)
+            <div class="transition-all flex shadow-lg flex-col p-5 bg-pf-light-orage hover:bg-pf-orange3 dark:bg-dark rounded-[30px] w-full md:w-[calc(33.3%-13px)]"
+                data-aos="fade-up"
+                data-aos-duration="2000"
+                data-aos-delay="{{ $index * 100 }}"
+            >
                 <p class="font-Inconsolata-Bold text-[1.5rem] text-dark dark:text-white">{{ $item->title }}</p>
                 <div class="font-MavenPro-Regular text-dark dark:text-pf-gray2 project-desc">
                     {!! $item->description !!}

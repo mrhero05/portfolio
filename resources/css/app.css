@@ -70,6 +70,7 @@
     --color-pf-peach: #FEE7DC;
     --color-pf-orange: #FF5500;
     --color-pf-orange2: #D2622E;
+    --color-pf-orange3: #FFE5D9;
     --color-pf-light-orage: #FEE7DC;
     --color-pf-dark3: #2A3847;
     --color-dark: #292C34;
@@ -103,6 +104,32 @@
 
 /* Custom CSS */
 @layer components{
+    @keyframes bounceY {
+        0% {
+            transform: translateY(5px);
+        }
+        50% {
+            transform: translateY(0px);
+        }
+        100% {
+            transform: translateY(5px);
+        }
+    }
+
+    .bounce-custom {
+        animation-name: bounceY;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
+
+    button#scroll_top{
+        @apply opacity-0 pointer-events-none
+    }
+
+    button#scroll_top.show{
+        @apply opacity-100 pointer-events-auto
+    }
+
     .sub-heading p{
         @apply text-pf-orange
     }
