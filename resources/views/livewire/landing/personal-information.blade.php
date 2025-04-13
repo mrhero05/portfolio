@@ -39,11 +39,11 @@
                         data-aos-duration="1000"
                     >Download</p>
                     <div class="flex justify-center my-5 gap-x-[10px]">
-                        <a class="bg-pf-orange py-[8px] w-[120px] px-[20px] text-white rounded-full font-MavenPro-Bold text-center" href="{{ $item['info_data'][0]['heading'] }}"
+                        <a class="bg-pf-orange py-[8px] w-[120px] px-[20px] text-white rounded-full font-MavenPro-Bold text-center" href="{{ $item['info_data'][0]['resume'] }}" target="_blank"
                             data-aos="fade-up"
                             data-aos-duration="1000"
                         >RESUME</a>
-                        <a class="bg-pf-dark3 py-[8px] w-[120px] px-[20px] text-white rounded-full font-MavenPro-Bold text-center border dark:border-pf-gray2 dark:text-pf-gray2 dark:bg-dark" href="{{ $item['info_data'][0]['heading'] }}"
+                        <a class="bg-pf-dark3 py-[8px] w-[120px] px-[20px] text-white rounded-full font-MavenPro-Bold text-center border dark:border-pf-gray2 dark:text-pf-gray2 dark:bg-dark" href="{{ $item['info_data'][0]['cv'] }}" target="_blank"
                             data-aos="fade-up"
                             data-aos-duration="2000"
                         >CV</a>
