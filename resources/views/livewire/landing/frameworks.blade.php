@@ -26,7 +26,7 @@
                             data-aos-delay="{{ $index * 100 }}"
                         >
                             @if ($item->frameworks_img)
-                                <img src="{{ url($item->frameworks_img) }}"
+                                <img src="{{ asset('storage/'.$item->frameworks_img) }}"
                                 class="w-[25px] h-auto" alt="language_icon">
                             @endif
                             <p class="">

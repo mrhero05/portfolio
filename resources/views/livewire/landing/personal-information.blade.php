@@ -4,7 +4,7 @@
             @if ($item['info_data'][0])
             <div class="flex flex-row flex-wrap">
                 <div class="flex flex-col items-center w-full md:w-4/12">
-                    <img src="{{ $item->profile }}" class="w-[230px] h-auto" alt="Portfolio_Image"
+                    <img src="{{ asset('storage/'.$item->profile) }}" class="w-[230px] h-auto" alt="Portfolio_Image"
                         data-aos="fade-right"
                         data-aos-duration="1000"
                     >
