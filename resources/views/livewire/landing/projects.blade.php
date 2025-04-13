@@ -12,7 +12,7 @@
     @if ($projects)
         <div class="my-[50px] flex flex-wrap gap-[20px] text">
         @foreach ($projects as $index => $item)
-            <div class="transition-all flex shadow-lg flex-col p-5 bg-pf-light-orage hover:bg-pf-orange3 dark:bg-dark rounded-[30px] w-full md:w-[calc(33.3%-13px)]"
+            <div class="transition-all flex shadow-lg flex-col p-5 bg-pf-light-orage hover:bg-pf-orange3 dark:hover:bg-dark2 dark:bg-dark rounded-[30px] w-full md:w-[calc(33.3%-13px)]"
                 data-aos="fade-up"
                 data-aos-duration="2000"
                 data-aos-delay="{{ $index * 100 }}"

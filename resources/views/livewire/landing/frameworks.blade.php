@@ -11,7 +11,7 @@
             >Frameworks & Tech Stack</h2>
         </div>
         <div class="">
-            <div class="flex flex-wrap gap-[10px] justify-center m-[50px] mx-[20px] md:mx-[100px]">
+            <div class="flex flex-wrap gap-[20px] justify-center m-[50px] mx-[20px] md:mx-[100px]">
                 @if ($frameworks)
                     @foreach ($frameworks as $index => $item)
                         @php
