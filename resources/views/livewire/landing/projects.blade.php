@@ -42,7 +42,7 @@
                             </flux:tooltip>
                             @foreach ($item->project_images as $index => $images)
                                 @if ($index > 0)
-                                    <a href="{{ asset('storage'/$images) }}" class="hidden" data-lightbox="{{ $item->title }}"></a>
+                                    <a href="{{ asset('storage/'.$images) }}" class="hidden" data-lightbox="{{ $item->title }}"></a>
                                 @endif
                             @endforeach
                         @endif
