@@ -10,9 +10,9 @@
         "filament/filament": "^3.3",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1",
-        "livewire/flux": "^2.0",
         "livewire/livewire": "^3.6",
-        "php-flasher/flasher-laravel": "^2.1"
+        "php-flasher/flasher-laravel": "^2.1",
+        "wireui/wireui": "^2.4"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",

@@ -2,7 +2,6 @@
 
 namespace App\Livewire\Modal;
 
-use Flux\Flux;
 use App\Mail\Contact;
 use Livewire\Component;
 use Livewire\Attributes\Validate;
@@ -22,6 +21,7 @@ class ContactModal extends Component
 
     public function send()
     {
+        $this->validate();
         try {
             // Send Email
             Mail::to(env('MAIL_TO_ADDRESS'))->send(new Contact($this->name, $this->email, $this->message));
@@ -31,15 +31,13 @@ class ContactModal extends Component
             ]);
             // Reset Fields
             $this->reset(['name', 'email', 'message']);
-
-            Flux::modal('contact-modal')->close();
+            $this->dispatch('close-contact-modal');
         } catch (\Throwable $th) {
             // Show Error Flash
-            // dd($th);
+            dd($th);
             flash()->error('There was an error while sending your message. Please try again later.', [
                 'position' => 'bottom-right',
             ]);
-            Flux::modal('contact-modal')->close();
         }
         // dd($this->email);
     }

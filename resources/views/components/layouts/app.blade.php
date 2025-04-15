@@ -7,7 +7,6 @@
         <title>{{ $title ?? 'Portfolio | Ogie Sanchez' }}</title>
         <link rel="icon" href="{{ asset('images/logos/logo.png') }}">
         @vite('resources/css/app.css')
-        @fluxAppearance
         {{-- fontawesome --}}
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
         {{-- lightbox css --}}
@@ -17,10 +16,13 @@
         {{-- AOS --}}
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        {{-- Wire UI --}}
+        <wireui:scripts />
+        {{-- <script src="//unpkg.com/alpinejs" defer></script> --}}
         {{-- Main JS --}}
         <script src="{{ asset('js/main.js') }}"></script>
     </head>
-    <body class="overflow-x-hidden md:overflow-x-auto">
+    <body class="overflow-x-hidden md:overflow-x-auto" x-data="{}">
         <div class="relative bg-cover bg-no-repeat bg-bodywhite bg-bodydark">
             <div class="absolute left-0">{!! file_get_contents(public_path('images/logos/left-design.svg')) !!}</div>
             <div class="absolute right-0">{!! file_get_contents(public_path('images/logos/right-design.svg')) !!}</div>
@@ -33,7 +35,6 @@
         <script>
             AOS.init();
         </script>
-        @fluxScripts
         {{-- lightbox script --}}
         <script src="{{ asset('js/lightbox/lightbox-plus-jquery.min.js') }}"></script>
         <script src="{{ asset('js/lightbox/custom-lightbox.js') }}"></script>

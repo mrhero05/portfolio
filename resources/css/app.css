@@ -1,7 +1,8 @@
 @import 'tailwindcss';
-@import '../../vendor/livewire/flux/dist/flux.css';
+@import '../../vendor/wireui/wireui/ts/global.css';
 @custom-variant dark (&:where(.dark, .dark *));
 
+@source '../../vendor/wireui/wireui';
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 @source "../**/*.blade.php";

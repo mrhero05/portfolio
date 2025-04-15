@@ -9,11 +9,11 @@
             </div>
         </div>
         <div class="block w-max md:fixed md:m-5 right-0 z-1">
-            <flux:radio.group x-data variant="segmented" x-model="$flux.appearance" class="hover:cursor-pointer">
+            {{-- <flux:radio.group x-data variant="segmented" x-model="$flux.appearance" class="hover:cursor-pointer">
                 <flux:radio value="light" icon="sun" />
                 <flux:radio value="dark" icon="moon" />
                 <flux:radio value="system" icon="computer-desktop" />
-            </flux:radio.group>
+            </flux:radio.group> --}}
         </div>
     </section>
 </header>
