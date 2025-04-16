@@ -1,6 +1,6 @@
 <div x-data x-on:close-contact-modal.window="$closeModal('contactModal')">
     <x-modal name="contactModal" align="center" blur="md" width="w-full md:!w-[550px]">
-        <form wire:submit='send'>
+        <form wire:submit.prevent='send'>
             <x-card>
                 <x-slot name="title" class="w-full">
                     <div class="flex items-center gap-2">
@@ -35,10 +35,12 @@
                     />
                 </div>
                 <x-slot name="footer" class="flex justify-end gap-x-4">
-                    <div wire:loading>
-                        <x-fields.loading></x-fields.loading>
-                    </div>
-                    <button class="cursor-pointer bg-pf-dark3 text-white p-[8px_20px] rounded-full hover:bg-pf-orange transition-all" type="submit">Send <i class="fa-solid fa-paper-plane"></i></button>
+                    <button class="flex items-center gap-x-[10px] cursor-pointer bg-pf-dark3 text-white p-[8px_20px] rounded-full hover:bg-pf-orange transition-all" type="submit" wire:loading.attr="disabled" wire:target="send">
+                        <div wire:loading wire:target='send'>
+                            <x-fields.loading></x-fields.loading>
+                        </div>
+                        Send <i class="fa-solid fa-paper-plane"></i>
+                    </button>
                 </x-slot>
             </x-card>
         </form>
