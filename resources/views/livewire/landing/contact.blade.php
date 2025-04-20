@@ -7,7 +7,7 @@
             <p class="font-Inconsolata-Black text-[1.5rem] text-white">Say Hello!</p>
             <p class="text-white font-MavenPro-Medium">Reach out to me for project proposals, inquiries, or just to say hello.</p>
         </div>
-        <x-button label="Contact me" class="font-MavenPro-Bold text-[1rem] animate-pulse hover:cursor-pointer ml-0 md:ml-auto text-white !bg-pf-dark3 !p-[10px_30px] h-max flex gap-x-[10px] items-center" rounded="full" right-icon="arrow-long-right" x-on:click="$openModal('contactModal')" />
+        <x-button label="Contact me" class="font-MavenPro-Bold text-[1rem] animate-pulse hover:cursor-pointer ml-0 md:ml-auto text-white !bg-pf-dark3 !p-[10px_30px] h-max flex gap-x-[10px] items-center hover:underline" rounded="full" right-icon="arrow-long-right" x-on:click="$openModal('contactModal')" />
     </div>
     <div class="flex my-[50px] text-center flex-col items-center">
         <p class="font-MavenPro-Bold text-[3.5rem] text-pf-orange"

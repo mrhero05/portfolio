@@ -38,5 +38,18 @@
         {{-- lightbox script --}}
         <script src="{{ asset('js/lightbox/lightbox-plus-jquery.min.js') }}"></script>
         <script src="{{ asset('js/lightbox/custom-lightbox.js') }}"></script>
+        <script src="https://unpkg.com/@popperjs/core@2"></script>
+        <script src="https://unpkg.com/tippy.js@6"></script>
+        <script>
+            // Tooltip with Tippy
+            tippy('.btn_image', {
+              content: 'View Project Image',
+              duration: 0
+            });
+            tippy('.btn_github', {
+              content: 'Visit on Github',
+              duration: 0
+            });
+          </script>
     </body>
 </html>

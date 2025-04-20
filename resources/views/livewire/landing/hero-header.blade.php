@@ -25,7 +25,7 @@
                                 <img src="{{ asset('storage/' . $lang['language_icon']) }}"
                                 class="w-[25px] h-auto" alt="language_icon">
                             @endif
-                            <p class="">
+                            <p class="dark:text-pf-gray3">
                                 {{ $lang['language_text'] }}
                             </p>
                         </a>

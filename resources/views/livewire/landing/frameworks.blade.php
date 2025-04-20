@@ -29,7 +29,7 @@
                                 <img src="{{ asset('storage/'.$item->frameworks_img) }}"
                                 class="w-[25px] h-auto" alt="language_icon">
                             @endif
-                            <p class="">
+                            <p class="dark:text-pf-gray3">
                                 {{ $item->title }}
                             </p>
                         </a>

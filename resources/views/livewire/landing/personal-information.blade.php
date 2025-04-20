@@ -14,7 +14,7 @@
                         >Let’s Work Together</a>
                 </div>
                 <div class="flex flex-col w-full md:w-8/12">
-                    <h2 class="font-MavenPro-Black text-7xl text-center mx-auto"
+                    <h2 class="font-MavenPro-Black text-7xl text-center mx-auto dark:text-white"
                         data-aos="fade-left"
                         data-aos-duration="1000"
                     >{{ $item['info_data'][0]['heading'] }}</h2>
@@ -24,7 +24,7 @@
                     >
                         {!! $item['info_data'][0]['sub_heading'] !!}
                     </div>
-                    <p class="justify-start mt-5 my-2 font-MavenPro-Medium font-bold"
+                    <p class="justify-start mt-5 my-2 font-MavenPro-Medium font-bold dark:text-white"
                         data-aos="fade-left"
                         data-aos-duration="2000"
                     >Personal Information:</p>
@@ -34,19 +34,19 @@
                     >
                         {!! $item['info_data'][0]['description'] !!}
                     </div>
-                    <p class="text-center mt-5 font-MavenPro-Bold text-[1.3rem]"
+                    <p class="text-center mt-5 font-MavenPro-Bold text-[1.3rem] dark:text-white"
                         data-aos="fade-left"
                         data-aos-duration="1000"
                     >Download</p>
                     <div class="flex justify-center my-5 gap-x-[10px]">
-                        <a class="bg-pf-orange py-[8px] w-[120px] px-[20px] text-white rounded-full font-MavenPro-Bold text-center" href="{{ $item['info_data'][0]['resume'] }}" target="_blank"
+                        <a class="bg-pf-orange py-[8px] w-[120px] px-[20px] text-white rounded-full font-MavenPro-Bold text-center hover:bg-pf-dark3 dark:border dark:border-pf-gray2" href="{{ $item['info_data'][0]['resume'] }}" target="_blank"
                             data-aos="fade-up"
                             data-aos-duration="1000"
                         >RESUME</a>
-                        <a class="bg-pf-dark3 py-[8px] w-[120px] px-[20px] text-white rounded-full font-MavenPro-Bold text-center border dark:border-pf-gray2 dark:text-pf-gray2 dark:bg-dark" href="{{ $item['info_data'][0]['cv'] }}" target="_blank"
+                        {{-- <a class="bg-pf-dark3 py-[8px] w-[120px] px-[20px] text-white rounded-full font-MavenPro-Bold text-center border dark:border-pf-gray2 dark:text-pf-gray2 dark:bg-dark" href="{{ $item['info_data'][0]['cv'] }}" target="_blank"
                             data-aos="fade-up"
                             data-aos-duration="2000"
-                        >CV</a>
+                        >CV</a> --}}
                     </div>
                 </div>
             </div>

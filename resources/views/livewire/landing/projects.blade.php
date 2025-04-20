@@ -28,18 +28,14 @@
                     @endif
                     <div class="ml-auto">
                         @if ($item->github_link)
-                            <flux:tooltip content="Visit on Github">
-                                <a href="{{ $item->github_link }}" class="dark:text-pf-gray2 text-[1.5rem] hover:text-pf-orange transition-all" target="_blank">
-                                    <i class="fa-brands fa-github"></i>
-                                </a>
-                            </flux:tooltip>
+                            <a href="{{ $item->github_link }}" class="btn_github dark:text-pf-gray2 text-[1.5rem] hover:text-pf-orange transition-all" target="_blank">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
                         @endif
                         @if ($item->project_images)
-                            <flux:tooltip content="View Project Image">
-                                <a href="{{ asset('storage/'.$item->project_images[0]) }}" class="dark:text-pf-gray2 text-[1.5rem] hover:text-pf-orange ml-3 transition-all" data-lightbox="{{ $item->title }}">
-                                    <i class="fa-solid fa-images"></i>
-                                </a>
-                            </flux:tooltip>
+                            <a href="{{ asset('storage/'.$item->project_images[0]) }}" class="btn_image dark:text-pf-gray2 text-[1.5rem] hover:text-pf-orange ml-3 transition-all" data-lightbox="{{ $item->title }}">
+                                <i class="fa-solid fa-images"></i>
+                            </a>
                             @foreach ($item->project_images as $index => $images)
                                 @if ($index > 0)
                                     <a href="{{ asset('storage/'.$images) }}" class="hidden" data-lightbox="{{ $item->title }}"></a>

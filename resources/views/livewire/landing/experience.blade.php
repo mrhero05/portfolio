@@ -13,7 +13,7 @@
             @foreach ($experience as $item)
             <div class="flex my-[50px] md:m-[50px] flex-col md:flex-row">
                 <div class="flex flex-col w-full md:w-[40%]">
-                    <p class="font-Inconsolata-SemiBold text-[1.5rem]"
+                    <p class="font-Inconsolata-SemiBold text-[1.5rem] dark:text-white"
                         data-aos="fade-right"
                         data-aos-duration="2000"
                     >{{ $item->position }} <span class="text-pf-orange2">{{ $item->company }}</span></p>
