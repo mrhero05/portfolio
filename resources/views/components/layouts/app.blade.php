@@ -21,6 +21,15 @@
         {{-- <script src="//unpkg.com/alpinejs" defer></script> --}}
         {{-- Main JS --}}
         <script src="{{ asset('js/main.js') }}"></script>
+        {{-- GA --}}
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-8E6X3X88TF"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-8E6X3X88TF');
+        </script>
     </head>
     <body class="overflow-x-hidden md:overflow-x-auto" x-data="{}">
         <div class="relative bg-cover bg-no-repeat bg-bodywhite bg-bodydark">
